@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Directory.scss";
+import { useParams } from "react-router-dom";
+import { list } from "./List";
 
-class Directory extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+function Directory() {
+  let { filterName } = useParams();
+  const [dirList, setList] = useState(list);
 
-    render() {
-        return (
-            <div className="directory-container">
-                <p>Hola</p>
-            </div>
-        )
+  useEffect(() => {
+    if (filterName) {
+      let filteredList = dirList.filter(user => user.type === filterName);
+      setList(filteredList);
+    } else {
+      setList(list);
     }
+  }, [filterName]);
+
+  return (
+    <div className="directory-container">
+      <div className="list-container">
+        {dirList.map(user => (
+          <div>
+            <a href={user.url}>{user.name}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Directory;
