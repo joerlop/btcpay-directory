@@ -1,4 +1,22 @@
 .app {
   font-family: 'Open Sans', sans-serif;
+
+  header {
+    border-bottom: 1px solid black;
+
+    .navigation-menu {
+      margin: 0 auto;
+      height: 60px;
+      max-width: 1000px;
+  
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  
+      p {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
