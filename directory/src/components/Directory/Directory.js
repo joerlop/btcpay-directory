@@ -9,7 +9,8 @@ function Directory() {
 
   useEffect(() => {
     if (filterName) {
-      let filteredList = dirList.filter(user => user.type === filterName);
+        console.log(filterName)
+      let filteredList = list.filter(user => user.type === filterName);
       setList(filteredList);
     } else {
       setList(list);
@@ -20,7 +21,7 @@ function Directory() {
     <div className="directory-container">
       <div className="list-container">
         {dirList.map(user => (
-          <div>
+          <div className="item">
             <a href={user.url}>{user.name}</a>
           </div>
         ))}
