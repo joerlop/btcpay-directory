@@ -6,15 +6,18 @@ function DirectoryItem(props) {
 
   return (
     <div className="item">
-      <a
-        onMouseEnter={e => setShow(true)}
-        onMouseLeave={e => setShow(false)}
-        target="_blank"
-        href={props.user.url}
-      >
-        {props.user.name}
-      </a>
-      <p className={`show-${show}`}>{props.user.description}</p>
+      <div className="item-content">
+        <a
+          onMouseEnter={e => setShow(true)}
+          onMouseLeave={e => setShow(false)}
+          target="_blank"
+          href={props.user.url}
+        >
+          {props.user.name}
+        </a>
+        <p className={`show-${show}`}>{props.user.description}</p>
+      </div>
+      <div className="separator"></div>
     </div>
   );
 }

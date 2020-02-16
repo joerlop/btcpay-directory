@@ -5,7 +5,7 @@ import { NavLink, Route, useRouteMatch } from "react-router-dom";
 import Directory from "./components/Directory/Directory";
 
 function App() {
-  const green = "#1E7A44";
+  const green = "#51B13E";
 
   return (
     <div className="app">
@@ -66,6 +66,13 @@ function App() {
           <Directory />
         </Route>
       </div>
+
+      <footer>
+        <div className="footer-content">
+          <p>Content Released under MIT license.</p>
+          <p>This website does not use cookies nor collect personal data.</p>
+        </div>
+      </footer>
     </div>
   );
 }
