@@ -5,8 +5,7 @@ import { NavLink, Route, useRouteMatch } from "react-router-dom";
 import Directory from "./components/Directory/Directory";
 
 function App() {
-  const green = "#51B13E";
-  let match = useRouteMatch();
+  const green = "#1E7A44";
 
   return (
     <div className="app">

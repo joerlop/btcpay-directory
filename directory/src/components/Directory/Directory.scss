@@ -22,19 +22,20 @@
             align-items: flex-start;
 
             a {
-                color: $black;
-                font-size: 1.3rem;
+                color: $primaryGreen;
+                font-size: 1.4rem;
                 text-decoration: none;
                 transition: all 0.2s ease-out;
-                margin-bottom: 15px;
+                font-weight: bold;
 
                 &:hover {
-                    color: $primaryGreen;
+                    color: $tertiaryGreen;
                 }
             }
 
             p {
-                font-size: 0.9rem;
+                margin-top: 15px;
+                font-size: 0.8rem;
                 line-height: 1.4;
             }
         }
