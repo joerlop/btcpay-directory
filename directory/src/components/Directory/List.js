@@ -82,5 +82,12 @@ export const list = [
     type: "hosts",
     description:
       "BTCPay Jungle is a hosted, open-source cryptocurrency payment processor. It is secure, private, censorship-resistant and free."
+  },
+  {
+    name: "Nakamoto Institute",
+    url: "https://nakamotoinstitute.org/donate/",
+    type: "non-profit",
+    description:
+      "Founded in 2013, Nakamoto Institute is an educational resource for everything Bitcoin. In-depth researches to Satoshi Nakamoto quotes and forum posts archive."
   }
 ];
