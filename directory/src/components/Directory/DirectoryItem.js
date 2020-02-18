@@ -1,6 +1,5 @@
 import React from "react";
 import "./Directory.scss";
-import nonprofit from "../../images/foundation.svg"
 
 function DirectoryItem(props) {
 
