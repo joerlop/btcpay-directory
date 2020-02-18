@@ -1,9 +1,9 @@
 @import "constants.scss";
 
 .app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 62.5%;
-  box-sizing: border-box;  
+  box-sizing: border-box;
   height: 100vh;
 
   display: grid;
@@ -14,14 +14,39 @@
 
     .navigation-menu {
       display: grid;
-      grid-template-columns: 10vw 100px 1fr auto 1vw;
+      grid-template-columns: 10vw 100px 0.5fr 1fr 10vw;
       padding: 15px 0 0 0;
-      grid-template-areas: ". logo . . .";
-  
+      grid-template-areas: ". logo . filters .";
+
       img {
         grid-area: logo;
         height: 50px;
         width: 100px;
+      }
+
+      .filters {
+        grid-area: filters;
+        align-self: center;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+
+        .filter {
+          width: auto;
+          font-size: 14px;
+          font-weight: bold;
+          color: $mediumGrey;
+          text-decoration: none;
+          margin-right: 0;
+          margin-left: 5%;
+          transition: all 0.2s ease-out;
+
+          &:hover {
+            color: $primaryGreen;
+          }
+        }
       }
     }
 
@@ -30,7 +55,6 @@
       height: calc(100vw * 0.07);
       margin-bottom: calc(100vw * -0.035);
     }
-    
   } //header
 
   .home-content {
@@ -40,31 +64,32 @@
     padding-bottom: 75px;
 
     h2 {
-      margin-top: 75px;
-      font-size: 2.5rem;
+      color: $darkGreen;
+      margin: 75px 0;
+      font-size: 3rem;
       font-weight: bold;
     }
 
-    .filters {
-      margin-top: 25px;
-      margin-bottom: 75px;
+    // .filters {
+    //   margin-top: 25px;
+    //   margin-bottom: 75px;
 
-      .filter {
-        font-size: 1rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: $grey;
-        margin-right: 2.5%;
+    //   .filter {
+    //     font-size: 1rem;
+    //     font-weight: bold;
+    //     text-decoration: none;
+    //     color: $grey;
+    //     margin-right: 2.5%;
 
-        &:hover {
-          color: $primaryGreen;
-        }
-      }
-    }
+    //     &:hover {
+    //       color: $primaryGreen;
+    //     }
+    //   }
+    // }
   } //home-content
 
   footer {
-    background: $tertiaryGreen; 
+    background: $darkGreen;
     width: 100%;
 
     display: flex;
@@ -87,4 +112,3 @@
     }
   }
 }
-
