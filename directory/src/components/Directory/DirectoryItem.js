@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Directory.scss";
+import nonprofit from "../../images/foundation.svg"
 
 function DirectoryItem(props) {
-  const [show, setShow] = useState(false);
 
   return (
     <div className="item">
       <div className="item-content">
-        <a
-          onMouseEnter={e => setShow(true)}
-          onMouseLeave={e => setShow(false)}
-          target="_blank"
-          href={props.user.url}
-        >
+        {/* <div className="category-image-container">
+          <a className="category-image-a" target="_blank" href={props.user.url}>
+            <img className="category-image" src={nonprofit}/>
+          </a>
+        </div> */}
+        <a target="_blank" href={props.user.url}>
           {props.user.name}
         </a>
-        <p className={`show-${show}`}>{props.user.description}</p>
+        <p>{props.user.description}</p>
       </div>
-      <div className="separator"></div>
+      <div className="separator" />
     </div>
   );
 }
