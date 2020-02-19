@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import { NavLink, Route, useRouteMatch } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import Directory from "./components/Directory/Directory";
 import btcPayLogo from "./images/btcpay-logo.svg"
 
@@ -8,7 +8,6 @@ function App() {
   const green = "#51B13E";
   const black = "#262626";
   const pickedColor = green;
-
 
   return (
     <div className="app">
