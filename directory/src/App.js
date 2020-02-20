@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { NavLink, Route } from "react-router-dom";
 import Directory from "./components/Directory/Directory";
-import btcPayLogo from "./images/btcpay-logo.svg"
+import btcPayLogo from "./images/btcpay-directory-logo.svg"
 
 function App() {
   const green = "#51B13E";

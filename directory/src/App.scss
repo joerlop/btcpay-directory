@@ -15,14 +15,14 @@
       box-shadow: 0 10px 40px rgba(12, 0, 68, 0.1); //gradient
 
       display: grid;
-      grid-template-columns: 10% 100px 1fr 10%;
+      grid-template-columns: 10% 150px 1fr 10%;
       padding: 15px 0;
       grid-template-areas: ". logo filters .";
 
       img {
         grid-area: logo;
-        height: 50px;
-        width: 100px;
+        height: auto;
+        width: 225px;
       }
 
       .filters {
