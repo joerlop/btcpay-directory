@@ -57,7 +57,7 @@ function App() {
             </NavLink>
           </div>
         </div>
-        <svg
+        {/* <svg
           className="navigation-gradient"
           enable-background="new 0 0 100 7"
           height="7"
@@ -82,53 +82,11 @@ function App() {
             d="m100 .916v-.916h-100v4c11.385-2 80.846-5.162 100-3.084z"
             fill="#fff"
           />
-        </svg>
+        </svg> */}
       </header>
 
       <div className="home-content">
         <h2>Directory</h2>
-        {/* <div className="filters">
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/"}
-          >
-            All
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/apps"}
-          >
-            Apps
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/hosts"}
-          >
-            Hosts
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/merchants"}
-          >
-            Merchants
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/non-profit"}
-          >
-            Non-profit
-          </NavLink>
-        </div> */}
         <Route exact path={"/"}>
           <Directory />
         </Route>
