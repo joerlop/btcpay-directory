@@ -12,6 +12,10 @@
     @media (max-width: $secondBreak) {
       font-size: 2rem;
     }
+
+    @media (max-width: $thirdBreak) {
+      font-size: 1.6rem;
+    }
   }
 
   .filters {
@@ -34,6 +38,10 @@
       @media (max-width: $secondBreak) {
         font-size: 0.9rem;
         margin-right: 6%;
+      }
+
+      @media (max-width: $thirdBreak) {
+        font-size: 0.75rem;
       }
 
       &:hover {
@@ -84,6 +92,10 @@
             font-size: 1.2rem;
           }
 
+          @media (max-width: $thirdBreak) {
+            font-size: 1rem;
+          }
+
           &:hover {
             color: $darkGreen;
           }
@@ -93,6 +105,10 @@
           margin-top: 15px;
           font-size: 0.8rem;
           line-height: 1.4;
+
+          @media (max-width: $thirdBreak) {
+            font-size: 0.7rem;
+          }
         }
       } //item-content
 
