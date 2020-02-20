@@ -23,7 +23,7 @@ function App() {
             <NavLink className="newentry" exact to={"/newentry"}>
               Submit an entry
             </NavLink>
-            {/* <img src={darkModeImg} /> */}
+            <img src={darkModeImg} />
           </div>
           {/* <div className="filters">
             <NavLink

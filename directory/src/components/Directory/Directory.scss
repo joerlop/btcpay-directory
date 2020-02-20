@@ -1,13 +1,17 @@
 @import "../../constants.scss";
 
 .directory-container {
-  
+
   h2 {
     text-align: center;
     color: $darkGreen;
     margin: 75px 0 50px 0;
     font-size: 2.25rem;
     font-weight: bold;
+
+    @media (max-width: $secondBreak) {
+      font-size: 2rem;
+    }
   }
 
   .filters {
@@ -20,8 +24,17 @@
       font-weight: bold;
       text-decoration: none;
       color: $mediumGrey;
-      margin-right: 2.5%;
+      margin-right: 3%;
       transition: all 0.2s ease-out;
+
+      @media (max-width: $firstBreak) {
+        margin-right: 5%;
+      }
+
+      @media (max-width: $secondBreak) {
+        font-size: 0.9rem;
+        margin-right: 6%;
+      }
 
       &:hover {
         color: $primaryGreen;
@@ -47,6 +60,7 @@
     @media (max-width: $secondBreak) {
       grid-template-columns: 1fr;
       grid-column-gap: 0;
+      margin: 0 5%;
     }
 
     .item {
@@ -65,6 +79,10 @@
           text-decoration: none;
           font-weight: bold;
           transition: all 0.2s ease-out;
+
+          @media (max-width: $secondBreak) {
+            font-size: 1.2rem;
+          }
 
           &:hover {
             color: $darkGreen;

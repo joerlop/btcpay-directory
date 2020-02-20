@@ -5,6 +5,7 @@
   font-size: 62.5%;
   box-sizing: border-box;
   height: 100vh;
+  width: 100%;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -19,12 +20,20 @@
       padding: 15px 0;
       grid-template-areas: ". logo items .";
 
+      @media (max-width: $secondBreak) {
+        grid-template-columns: 5% 150px 1fr 5%;
+      }
+
       a {
         grid-area: logo;
 
         img {
           height: auto;
           width: 250px;
+
+          @media (max-width: $secondBreak) {
+            width: 225px;
+          }
         }
       }
 
@@ -48,6 +57,11 @@
           cursor: pointer;
           transition: all 0.2s ease;
 
+          @media (max-width: $secondBreak) {
+            font-size: 0.9rem;
+            padding: 9px 18px;
+          }
+
           &:hover {
             background: $darkGreen;
             color: white;
@@ -56,7 +70,16 @@
 
         img {
           height: 30px;
-          margin-left: 3%;
+          margin-left: 4%;
+
+          @media (max-width: $firstBreak) {
+            margin-left: 5%;
+          }
+
+          @media (max-width: $secondBreak) {
+            height: 27px;
+            margin-left: 5%;
+          }
         }
       }
       // .filters {
@@ -90,19 +113,25 @@
   } //header
 
   .main-content {
-    width: calc(100% - 20vw);
-    margin: 0 10%;
+    width: 80%;
+    margin: 0 auto;
     padding-bottom: 75px;
+
+    @media (max-width: $secondBreak) {
+      width: 90%;
+    }
   }
 
   footer {
     background: $darkGreen;
-    width: 100%;
 
     .footer-content {
-      width: 100%;
       margin-left: 10%;
       padding: 20px 0;
+
+      @media (max-width: $secondBreak) {
+        margin-left: 5%;
+      }
 
       p {
         color: white;
