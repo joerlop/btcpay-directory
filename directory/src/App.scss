@@ -63,27 +63,33 @@
     h2 {
       text-align: center;
       color: $darkGreen;
-      margin: 75px 0;
-      font-size: 2.75rem;
+      margin: 75px 0 50px 0;
+      font-size: 2rem;
       font-weight: bold;
     }
 
-    // .filters {
-    //   margin-top: 25px;
-    //   margin-bottom: 75px;
+    .filters {
+      margin-bottom: 75px;
+      display: flex;
+      justify-content: center;
 
-    //   .filter {
-    //     font-size: 1rem;
-    //     font-weight: bold;
-    //     text-decoration: none;
-    //     color: $grey;
-    //     margin-right: 2.5%;
+      .filter {
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: $mediumGrey;
+        margin-right: 2.5%;
+        transition: all 0.2s ease-out;
 
-    //     &:hover {
-    //       color: $primaryGreen;
-    //     }
-    //   }
-    // }
+        &:hover {
+          color: $primaryGreen;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
   } //home-content
 
   footer {
