@@ -4,7 +4,7 @@ import "./NewEntry.scss";
 function NewEntry() {
 
   return (
-    <p>Hello!</p>
+    <p></p>
   );
 }
 
