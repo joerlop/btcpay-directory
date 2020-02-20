@@ -2,19 +2,30 @@ import React from "react";
 import "./App.scss";
 import { NavLink, Route } from "react-router-dom";
 import Directory from "./components/Directory/Directory";
-import btcPayLogo from "./images/btcpay-logo.svg"
+import NewEntry from "./components/NewEntry/NewEntry"
+import btcPayLogo from "./images/btcpay-directory-logo.svg";
+import darkModeImg from "./images/darkMode.svg"
 
 function App() {
   const green = "#51B13E";
   const black = "#262626";
+  const darkGreen = "#1E7A44";
   const pickedColor = green;
 
   return (
     <div className="app">
       <header>
         <div className="navigation-menu">
-          <img src={btcPayLogo} />
-          <div className="filters">
+          <a href="/">
+            <img src={btcPayLogo} />
+          </a>
+          <div className="nav-items">
+            <NavLink className="newentry" exact to={"/newentry"}>
+              Submit an entry
+            </NavLink>
+            <img src={darkModeImg} />
+          </div>
+          {/* <div className="filters">
             <NavLink
               className="filter"
               exact
@@ -55,9 +66,9 @@ function App() {
             >
               NON&#8209;PROFITS
             </NavLink>
-          </div>
+          </div> */}
         </div>
-        <svg
+        {/* <svg
           className="navigation-gradient"
           enable-background="new 0 0 100 7"
           height="7"
@@ -82,59 +93,13 @@ function App() {
             d="m100 .916v-.916h-100v4c11.385-2 80.846-5.162 100-3.084z"
             fill="#fff"
           />
-        </svg>
+        </svg> */}
       </header>
 
-      <div className="home-content">
-        <h2>Directory</h2>
-        {/* <div className="filters">
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/"}
-          >
-            All
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/apps"}
-          >
-            Apps
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/hosts"}
-          >
-            Hosts
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/merchants"}
-          >
-            Merchants
-          </NavLink>
-          <NavLink
-            className="filter"
-            exact
-            activeStyle={{ color: green }}
-            to={"/non-profit"}
-          >
-            Non-profit
-          </NavLink>
-        </div> */}
-        <Route exact path={"/"}>
-          <Directory />
-        </Route>
-        <Route exact path={"/:filterName"}>
-          <Directory />
-        </Route>
+      <div className="main-content">
+        <Route exact path="/" component={Directory} />
+        <Route exact path="/filter/:filterName" component={Directory} />
+        <Route exact path="/newentry" component={NewEntry} />
       </div>
 
       <footer>

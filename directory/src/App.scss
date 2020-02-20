@@ -5,109 +5,142 @@
   font-size: 62.5%;
   box-sizing: border-box;
   height: 100vh;
+  width: 100%;
 
   display: grid;
-  grid-template-rows: auto 1fr 75px;
+  grid-template-rows: auto 1fr auto;
 
   header {
-    align-self: center;
 
     .navigation-menu {
-      display: grid;
-      grid-template-columns: 10vw 100px 0.5fr 1fr 10vw;
-      padding: 15px 0 0 0;
-      grid-template-areas: ". logo . filters .";
+      box-shadow: 0 10px 40px rgba(12, 0, 68, 0.1); //gradient
 
-      img {
-        grid-area: logo;
-        height: 50px;
-        width: 100px;
+      display: grid;
+      grid-template-columns: 10% 150px 1fr 10%;
+      padding: 15px 0;
+      grid-template-areas: ". logo items .";
+
+      @media (max-width: $secondBreak) {
+        grid-template-columns: 5% 150px 1fr 5%;
       }
 
-      .filters {
-        grid-area: filters;
+      a {
+        grid-area: logo;
+
+        img {
+          height: auto;
+          width: 250px;
+
+          @media (max-width: $secondBreak) {
+            width: 225px;
+          }
+        }
+      }
+
+      .nav-items {
+        grid-area: items;
         align-self: center;
         width: 100%;
 
         display: flex;
-        flex-wrap: nowrap;
         justify-content: flex-end;
+        align-items: center;
 
-        .filter {
-          width: auto;
-          font-size: 14px;
-          font-weight: bold;
-          color: $mediumGrey;
+        .newentry {
+          font-size: 1rem;
           text-decoration: none;
-          margin-right: 0;
-          margin-left: 5%;
-          transition: all 0.2s ease-out;
+          border: 2px solid $darkGreen;
+          border-radius: 4px;
+          padding: 10px 20px;
+          font-weight: 600;
+          color: $darkGreen;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          @media (max-width: $secondBreak) {
+            font-size: 0.9rem;
+            padding: 9px 18px;
+          }
 
           &:hover {
-            color: $primaryGreen;
+            background: $darkGreen;
+            color: white;
+          }
+        }
+
+        img {
+          height: 30px;
+          margin-left: 4%;
+
+          @media (max-width: $firstBreak) {
+            margin-left: 5%;
+          }
+
+          @media (max-width: $secondBreak) {
+            height: 27px;
+            margin-left: 5%;
           }
         }
       }
+      // .filters {
+      //   grid-area: filters;
+      //   align-self: center;
+      //   width: 100%;
+
+      //   display: flex;
+      //   justify-content: flex-end;
+
+      //   .filter {
+      //     font-size: 14px;
+      //     font-weight: bold;
+      //     color: $mediumGrey;
+      //     text-decoration: none;
+      //     margin-left: 4%;
+      //     transition: all 0.2s ease-out;
+
+      //     &:hover {
+      //       color: $primaryGreen;
+      //     }
+      //   }
+      // }
     }
 
-    .navigation-gradient {
-      width: 100vw;
-      height: calc(100vw * 0.07);
-      margin-bottom: calc(100vw * -0.035);
-    }
+    // .navigation-gradient {
+    //   width: 100vw;
+    //   height: calc(100vw * 0.07);
+    //   margin-bottom: calc(100vw * -0.035);
+    // }
   } //header
 
-  .home-content {
-    width: calc(100% - 20vw);
+  .main-content {
+    width: 80%;
     margin: 0 auto;
-    margin: 0 10vw;
     padding-bottom: 75px;
 
-    h2 {
-      color: $darkGreen;
-      margin: 75px 0;
-      font-size: 3rem;
-      font-weight: bold;
+    @media (max-width: $secondBreak) {
+      width: 90%;
     }
-
-    // .filters {
-    //   margin-top: 25px;
-    //   margin-bottom: 75px;
-
-    //   .filter {
-    //     font-size: 1rem;
-    //     font-weight: bold;
-    //     text-decoration: none;
-    //     color: $grey;
-    //     margin-right: 2.5%;
-
-    //     &:hover {
-    //       color: $primaryGreen;
-    //     }
-    //   }
-    // }
-  } //home-content
+  }
 
   footer {
     background: $darkGreen;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
 
     .footer-content {
-      width: 1000px;
-      margin: 0 auto;
+      margin-left: 10%;
+      padding: 20px 0;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: flex-start;
+      @media (max-width: $secondBreak) {
+        margin-left: 5%;
+      }
 
       p {
         color: white;
         font-size: 0.8rem;
         margin-bottom: 10px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
   }
