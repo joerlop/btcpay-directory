@@ -17,35 +17,69 @@
       display: grid;
       grid-template-columns: 10% 150px 1fr 10%;
       padding: 15px 0;
-      grid-template-areas: ". logo filters .";
+      grid-template-areas: ". logo items .";
 
-      img {
+      a {
         grid-area: logo;
-        height: auto;
-        width: 225px;
+
+        img {
+          height: auto;
+          width: 250px;
+        }
       }
 
-      .filters {
-        grid-area: filters;
+      .nav-items {
+        grid-area: items;
         align-self: center;
         width: 100%;
 
         display: flex;
         justify-content: flex-end;
+        align-items: center;
 
-        .filter {
-          font-size: 14px;
-          font-weight: bold;
-          color: $mediumGrey;
+        .newentry {
+          font-size: 1rem;
           text-decoration: none;
-          margin-left: 4%;
-          transition: all 0.2s ease-out;
+          border: 2px solid $darkGreen;
+          border-radius: 4px;
+          padding: 10px 20px;
+          font-weight: 600;
+          color: $darkGreen;
+          cursor: pointer;
+          transition: all 0.2s ease;
 
           &:hover {
-            color: $primaryGreen;
+            background: $darkGreen;
+            color: white;
           }
         }
+
+        img {
+          height: 30px;
+          margin-left: 3%;
+        }
       }
+      // .filters {
+      //   grid-area: filters;
+      //   align-self: center;
+      //   width: 100%;
+
+      //   display: flex;
+      //   justify-content: flex-end;
+
+      //   .filter {
+      //     font-size: 14px;
+      //     font-weight: bold;
+      //     color: $mediumGrey;
+      //     text-decoration: none;
+      //     margin-left: 4%;
+      //     transition: all 0.2s ease-out;
+
+      //     &:hover {
+      //       color: $primaryGreen;
+      //     }
+      //   }
+      // }
     }
 
     // .navigation-gradient {
@@ -55,42 +89,11 @@
     // }
   } //header
 
-  .home-content {
+  .main-content {
     width: calc(100% - 20vw);
     margin: 0 10%;
     padding-bottom: 75px;
-
-    h2 {
-      text-align: center;
-      color: $darkGreen;
-      margin: 75px 0 50px 0;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    .filters {
-      margin-bottom: 75px;
-      display: flex;
-      justify-content: center;
-
-      .filter {
-        font-size: 1rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: $mediumGrey;
-        margin-right: 2.5%;
-        transition: all 0.2s ease-out;
-
-        &:hover {
-          color: $primaryGreen;
-        }
-
-        &:last-of-type {
-          margin-right: 0;
-        }
-      }
-    }
-  } //home-content
+  }
 
   footer {
     background: $darkGreen;
