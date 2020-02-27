@@ -26,7 +26,7 @@
                 width: 100%;
                 color: $grey;
                 font-size: 0.8rem;
-    
+
                 input, textarea {
                     box-sizing: border-box;
                     display: block;
@@ -49,6 +49,10 @@
                     padding: 10px 7.5px;
                     line-height: 1.5;
                     height: 60px;
+                }
+
+                .input-error-true {
+                    border: 1px solid red;
                 }
     
                 select {
@@ -79,8 +83,8 @@
                 color: $darkGreen;
                 cursor: pointer;
                 transition: all 0.2s ease;
-
                 margin-top: 10px;
+                outline: none;
 
                 &:hover {
                     background: $darkGreen;

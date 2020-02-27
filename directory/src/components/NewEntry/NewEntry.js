@@ -10,7 +10,7 @@ class NewEntry extends React.Component {
       description: "",
       errName: false,
       errUrl: false,
-      errDesc: false,
+      errDescription: false,
       error: false,
       success: false
     };
@@ -18,47 +18,47 @@ class NewEntry extends React.Component {
 
   handleChange = e => {
     e.preventDefault();
+    const capitalizedName =
+      e.target.name.charAt(0).toUpperCase() + e.target.name.substring(1);
+
     this.setState({
       ...this.state,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
+      error: false,
+      [`err${capitalizedName}`]: false
     });
+  };
+
+  evaluateInputs = () => {
+    const result = {
+      name: this.state.name.trim() === "",
+      url: this.state.url.trim() === "",
+      description: this.state.description.trim() === ""
+    };
+    return result;
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    if (this.state.name.trim() === "") {
+    const submitResult = this.evaluateInputs();
+    if (submitResult.name || submitResult.url || submitResult.description) {
       this.setState({
         ...this.state,
-        errName: true,
         error: true,
-        success: false
-      })
-    }
-    if (this.state.url.trim() === "") {
-      this.setState({
-        ...this.state,
-        errUrl: true,
-        error: true,
-        success: false
-      })
-    }
-    if (this.state.description.trim() === "") {
-      this.setState({
-        ...this.state,
-        errDesc: true,
-        error: true,
-        success: false
-      })
-    }
-    if (this.state.name.trim() !== "" & this.state.url.trim() !== "" & this.state.description.trim() !== "") {
+        success:false,
+        errName: submitResult.name,
+        errUrl: submitResult.url,
+        errDescription: submitResult.description
+      });
+    } else {
       this.setState({
         ...this.state,
         error: false,
         errName: false,
         errUrl: false,
-        errDesc: false,
+        errDescription: false,
         success: true
-      })
+      });
     }
   };
 
@@ -68,45 +68,45 @@ class NewEntry extends React.Component {
         <h2>Organization Details</h2>
         <div className="form-container">
           <form onSubmit={e => this.handleSubmit(e)}>
-            <label for="name">
+            <label htmlFor="name">
               Name *
               <input
                 value={this.state.name}
                 onChange={e => this.handleChange(e)}
+                className={`input-error-${this.state.errName}`}
                 id="name"
                 name="name"
                 type="text"
                 placeholder="Your organization's name"
               />
             </label>
-            <label for="url">
+            <label htmlFor="url">
               URL *
               <input
                 value={this.state.url}
                 onChange={e => this.handleChange(e)}
+                className={`input-error-${this.state.errUrl}`}
                 id="url"
                 name="url"
                 type="url"
                 placeholder="URL of your organization"
               />
             </label>
-            <label for="type">
+            <label htmlFor="type">
               Type *
               <select id="type">
-                <option selected value="app">
-                  App
-                </option>
-                <option value="host">Host</option>
-                <option value="merchant">Merchant</option>
-                <option value="non-profit">Non-ptofit</option>
+                <option defaultValue>App</option>
+                <option>Host</option>
+                <option>Merchant</option>
+                <option>Non-ptofit</option>
               </select>
             </label>
-            <label for="description">
+            <label htmlFor="description">
               Description *
               <textarea
                 value={this.state.description}
                 onChange={e => this.handleChange(e)}
-                className="description"
+                className={`description input-error-${this.state.errDescription}`}
                 id="description"
                 name="description"
                 maxLength="250"
