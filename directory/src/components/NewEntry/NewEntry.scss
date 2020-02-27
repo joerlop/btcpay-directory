@@ -1,0 +1,121 @@
+@import "../../constants.scss";
+
+.newentry-container {
+    width: 875px;
+    margin: 0 auto;
+    margin-top: 75px;
+
+    h2 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $darkGreen;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        border: 2px solid $darkGreen;
+        border-radius: 5px;
+        padding: 40px 20px 20px 20px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            label {
+                width: 100%;
+                color: $grey;
+                font-size: 0.8rem;
+
+                input, textarea {
+                    box-sizing: border-box;
+                    display: block;
+                    width: 100%;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 1px solid $grey;
+                    padding: 0 7.5px;
+                    font-size: 0.8rem;
+                    
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $primaryGreen;
+                    }
+                }
+
+                textarea {
+                    padding: 10px 7.5px;
+                    line-height: 1.5;
+                    height: 60px;
+                }
+
+                .input-error-true {
+                    border: 1px solid red;
+                }
+    
+                select {
+                    box-sizing: border-box;
+                    width: 100%;
+                    display: block;
+                    font-family: "Open Sans";
+                    background: white;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                    font-size: 0.8rem;
+                    height: 40px;
+                    
+                    &:focus {
+                        outline: none;
+                        border: 1px solid $primaryGreen;
+                    }
+                }
+            }
+
+            button {
+                font-size: 1rem;
+                text-decoration: none;
+                border: 2px solid $darkGreen;
+                border-radius: 4px;
+                padding: 10px 40px;
+                font-weight: 600;
+                color: $darkGreen;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                margin-top: 10px;
+                outline: none;
+
+                &:hover {
+                    background: $darkGreen;
+                    color: white;
+                }
+            } //button
+
+            .submission-result {
+                font-size: 0.8rem;
+                margin-top: 10px;
+                height: 10px;
+                font-weight: bold;
+
+                .error {
+                    display: none;
+                    color: red;
+                }
+
+                .error-true {
+                    display: block;
+                }
+
+                .success {
+                    display: none;
+                    color: $primaryGreen;
+                }
+
+                .success-true {
+                    display: block;
+                }
+            }
+        } //form
+    }
+}
