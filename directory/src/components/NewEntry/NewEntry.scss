@@ -36,7 +36,7 @@
                     height: 40px;
                     border-radius: 5px;
                     border: 1px solid $grey;
-                    padding: 0 10px;
+                    padding: 0 7.5px;
                     font-size: 0.8rem;
                     
                     &:focus {
@@ -46,12 +46,9 @@
                 }
 
                 textarea {
-                    padding: 10px;
+                    padding: 10px 7.5px;
                     line-height: 1.5;
-                }
-
-                .description {
-                    height: 80px;
+                    height: 60px;
                 }
     
                 select {
@@ -88,6 +85,31 @@
                 &:hover {
                     background: $darkGreen;
                     color: white;
+                }
+            } //button
+
+            .submission-result {
+                font-size: 0.8rem;
+                margin-top: 10px;
+                height: 10px;
+                font-weight: bold;
+
+                .error {
+                    display: none;
+                    color: red;
+                }
+
+                .error-true {
+                    display: block;
+                }
+
+                .success {
+                    display: none;
+                    color: $primaryGreen;
+                }
+
+                .success-true {
+                    display: block;
                 }
             }
         } //form
