@@ -16,9 +16,13 @@
       box-shadow: 0 10px 40px rgba(12, 0, 68, 0.1); //gradient
 
       display: grid;
-      grid-template-columns: 10% 150px 1fr 10%;
+      grid-template-columns: 15% 150px 1fr 15%;
       padding: 15px 0;
       grid-template-areas: ". logo items .";
+
+      @media (max-width: $firstBreak) {
+        grid-template-columns: 10% 150px 1fr 10%;
+      }
 
       @media (max-width: $secondBreak) {
         grid-template-columns: 5% 150px 1fr 5%;
@@ -126,9 +130,9 @@
   } //header
 
   .main-content {
-    width: 80%;
-    margin: 0 auto;
     padding-bottom: 75px;
+    width: 100%;
+    margin: 0 auto;
 
     @media (max-width: $secondBreak) {
       width: 90%;
