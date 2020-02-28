@@ -9,6 +9,10 @@
         width: 80%;
     }
 
+    @media (max-width: $secondBreak) {
+        width: 90%;
+    }
+
     .entry-title {
         width: 100%;
         margin: 0 auto;
