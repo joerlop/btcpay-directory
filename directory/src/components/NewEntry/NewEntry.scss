@@ -1,47 +1,60 @@
 @import "../../constants.scss";
 
 .newentry-container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 75px;
 
     @media (max-width: $firstBreak) {
-        width: 90%;
+        width: 80%;
     }
 
     @media (max-width: $secondBreak) {
-        width: 95%;
+        width: 100%;
     }
 
-    h2 {
-        font-size: 1.6rem;
-        font-weight: bold;
-        color: $darkGreen;
-        margin-bottom: 20px;
+    .entry-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 0.9rem;
+        color: $black;
+        padding: 20px 0 20px 20%;
+        border-left: 2px solid $primaryGreen;
 
         @media (max-width: $secondBreak) {
-            font-size: 1.4rem;
+            font-size: 0.8rem;
+            border-left: none;
+            padding-left: 0;
         }
 
         @media (max-width: $thirdBreak) {
-            font-size: 1.2rem;
+            font-size: 0.7rem;
         }
     }
 
     .form-container {
-        border: 2px solid $darkGreen;
-        border-radius: 5px;
-        padding: 40px 20px 20px 20px;
 
         form {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            width: 100%;
+            border-left: 2px solid $primaryGreen;
+
+            @media (max-width: $secondBreak) {
+                border-left: none;
+            }
     
             label {
+                box-sizing: border-box;
                 width: 100%;
+                padding-left: 20%;
                 color: $grey;
                 font-size: 0.8rem;
+
+                @media (max-width: $secondBreak) {
+                    padding-left: 0;
+                }
 
                 @media (max-width: $thirdBreak) {
                     font-size: 0.7rem;
@@ -102,26 +115,28 @@
             }
 
             button {
-                font-size: 1rem;
+                margin-left: 20%;
+                font-size: 0.9rem;
                 text-decoration: none;
-                border: 2px solid $darkGreen;
+                border: 1px solid $primaryGreen;
                 border-radius: 4px;
                 padding: 10px 40px;
                 font-weight: 600;
-                color: $darkGreen;
+                color: white;
                 cursor: pointer;
                 transition: all 0.2s ease;
                 margin-top: 10px;
                 outline: none;
-                background: none;
+                background: $primaryGreen;
 
                 &:hover {
                     background: $darkGreen;
-                    color: white;
+                    border: 1px solid $darkGreen;
                 }
 
                 @media (max-width: $secondBreak) {
                     font-size: 0.9rem;
+                    margin-left: 0;
                 }
             
                 @media (max-width: $thirdBreak) {
@@ -130,10 +145,21 @@
             } //button
 
             .submission-result {
+                margin-left: 20%;
                 font-size: 0.8rem;
                 margin-top: 10px;
-                height: 10px;
+                height: 20px;
+                width: 100%;
                 font-weight: bold;
+
+                @media (max-width: $secondBreak) {
+                    font-size: 0.75rem;
+                    margin-left: 0;
+                }
+
+                p {
+                    width: 100%;
+                }
 
                 .error {
                     display: none;

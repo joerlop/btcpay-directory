@@ -1,20 +1,26 @@
 @import "../../constants.scss";
 
 .directory-container {
+  width: 70%;
+  margin: 0 auto;
+
+  @media (max-width: $firstBreak) {
+    width: 100%;
+  }
 
   h2 {
     text-align: center;
-    color: $darkGreen;
+    color: $primaryGreen;
     margin: 75px 0 50px 0;
-    font-size: 2.25rem;
+    font-size: 1.6rem;
     font-weight: bold;
 
     @media (max-width: $secondBreak) {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     @media (max-width: $thirdBreak) {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -24,7 +30,7 @@
     justify-content: center;
 
     .filter {
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: bold;
       text-decoration: none;
       color: $mediumGrey;
@@ -36,12 +42,12 @@
       }
 
       @media (max-width: $secondBreak) {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-right: 6%;
       }
 
       @media (max-width: $thirdBreak) {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
 
       &:hover {
@@ -82,22 +88,22 @@
         margin-bottom: 10px;
 
         a {
-          color: $primaryGreen;
-          font-size: 1.3rem;
+          color: $mediumGrey;
+          font-size: 1rem;
           text-decoration: none;
           font-weight: bold;
           transition: all 0.2s ease-out;
 
           @media (max-width: $secondBreak) {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
           }
 
           @media (max-width: $thirdBreak) {
-            font-size: 1rem;
+            font-size: 0.7rem;
           }
 
           &:hover {
-            color: $darkGreen;
+            color: $primaryGreen;
           }
         }
 

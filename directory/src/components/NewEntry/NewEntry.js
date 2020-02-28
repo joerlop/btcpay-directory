@@ -65,7 +65,7 @@ class NewEntry extends React.Component {
   render() {
     return (
       <div className="newentry-container">
-        <h2>Organization Details</h2>
+        <p className="entry-title">Please provide your organization's details:</p>
         <div className="form-container">
           <form onSubmit={e => this.handleSubmit(e)}>
             <label htmlFor="name">
