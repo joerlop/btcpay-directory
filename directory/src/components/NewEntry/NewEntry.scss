@@ -145,11 +145,17 @@
             } //button
 
             .submission-result {
+                margin-left: 20%;
                 font-size: 0.8rem;
                 margin-top: 10px;
                 height: 20px;
                 width: 100%;
                 font-weight: bold;
+
+                @media (max-width: $secondBreak) {
+                    font-size: 0.75rem;
+                    margin-left: 0;
+                }
 
                 p {
                     width: 100%;
