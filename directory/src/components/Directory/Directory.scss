@@ -50,9 +50,9 @@
         margin-right: 6%;
       }
 
-      @media (max-width: $thirdBreak) {
-        font-size: 0.7rem;
-      }
+      // @media (max-width: $thirdBreak) {
+      //   font-size: 0.7rem;
+      // }
 
       &:hover {
         color: $primaryGreen;
@@ -102,9 +102,9 @@
             font-size: 0.9rem;
           }
 
-          @media (max-width: $thirdBreak) {
-            font-size: 0.7rem;
-          }
+          // @media (max-width: $thirdBreak) {
+          //   font-size: 0.8rem;
+          // }
 
           &:hover {
             color: $primaryGreen;
@@ -116,9 +116,9 @@
           font-size: 0.8rem;
           line-height: 1.4;
 
-          @media (max-width: $thirdBreak) {
-            font-size: 0.7rem;
-          }
+          // @media (max-width: $thirdBreak) {
+          //   font-size: 0.8rem;
+          // }
         }
       } //item-content
 

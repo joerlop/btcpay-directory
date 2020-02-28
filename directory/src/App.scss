@@ -72,7 +72,7 @@
           }
 
           @media (max-width: $thirdBreak) {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             padding: 7.5px 14px;
           }
 
@@ -151,9 +151,9 @@
         font-size: 0.8rem;
         margin-bottom: 10px;
 
-        @media (max-width: $thirdBreak) {
-          font-size: 0.7rem;
-        }
+        // @media (max-width: $thirdBreak) {
+        //   font-size: 0.7rem;
+        // }
 
         &:last-of-type {
           margin-bottom: 0;
