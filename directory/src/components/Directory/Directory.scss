@@ -5,7 +5,11 @@
   margin: 0 auto;
 
   @media (max-width: $firstBreak) {
-    width: 100%;
+    width: 80%;
+  }
+
+  @media (max-width: $secondBreak) {
+    width: 90%;
   }
 
   h2 {
