@@ -138,6 +138,10 @@
       margin-left: 15%;
       padding: 20px 0;
 
+      @media (max-width: $firstBreak) {
+        margin-left: 10%;
+      }
+
       @media (max-width: $secondBreak) {
         margin-left: 5%;
       }
