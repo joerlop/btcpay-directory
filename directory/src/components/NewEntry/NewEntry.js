@@ -8,6 +8,7 @@ class NewEntry extends React.Component {
       name: "",
       url: "",
       description: "",
+      type: "apps",
       errName: false,
       errUrl: false,
       errDescription: false,
@@ -62,6 +63,14 @@ class NewEntry extends React.Component {
     }
   };
 
+  handleSelect = e => {
+    e.preventDefault();
+    this.setState({
+      ...this.state,
+      type: e.target.value
+    });
+  }
+
   render() {
     return (
       <div className="newentry-container">
@@ -94,11 +103,11 @@ class NewEntry extends React.Component {
             </label>
             <label htmlFor="type">
               Type *
-              <select id="type">
-                <option defaultValue>App</option>
-                <option>Host</option>
-                <option>Merchant</option>
-                <option>Non-ptofit</option>
+              <select onChange={e => this.handleSelect(e)} id="type">
+                <option value="apps" defaultValue>App</option>
+                <option value="hosts">Host</option>
+                <option value="merchants">Merchant</option>
+                <option value="non-profit">Non-ptofit</option>
               </select>
             </label>
             <label htmlFor="description">
