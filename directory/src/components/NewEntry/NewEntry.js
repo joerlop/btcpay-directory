@@ -46,7 +46,7 @@ class NewEntry extends React.Component {
       this.setState({
         ...this.state,
         error: true,
-        success:false,
+        success: false,
         errName: submitResult.name,
         errUrl: submitResult.url,
         errDescription: submitResult.description
@@ -60,6 +60,16 @@ class NewEntry extends React.Component {
         errDescription: false,
         success: true
       });
+
+      const issueBody = `New submission:%0A%0AName: ${this.state.name}%0AUrl: ${this.state.url}%0ADescription: ${this.state.description}%0AType: ${this.state.type}`;
+
+      const issueTitle = `New entry submission - ${this.state.name}`;
+
+      const repoUrl = "https://github.com/joerlop/btcpay-directory/issues";
+
+      const newPageUrl = `${repoUrl}/new?title=${issueTitle}&body=${issueBody}`;
+
+      window.open(newPageUrl, "_blank");
     }
   };
 
@@ -69,12 +79,14 @@ class NewEntry extends React.Component {
       ...this.state,
       type: e.target.value
     });
-  }
+  };
 
   render() {
     return (
       <div className="newentry-container">
-        <p className="entry-title">Please provide your organization's details:</p>
+        <p className="entry-title">
+          Please provide your organization's details:
+        </p>
         <div className="form-container">
           <form onSubmit={e => this.handleSubmit(e)}>
             <label htmlFor="name">
@@ -104,7 +116,9 @@ class NewEntry extends React.Component {
             <label htmlFor="type">
               Type *
               <select onChange={e => this.handleSelect(e)} id="type">
-                <option value="apps" defaultValue>App</option>
+                <option value="apps" defaultValue>
+                  App
+                </option>
                 <option value="hosts">Host</option>
                 <option value="merchants">Merchant</option>
                 <option value="non-profit">Non-ptofit</option>
@@ -127,7 +141,7 @@ class NewEntry extends React.Component {
                 Please fill all the required fields.
               </p>
               <p className={`success success-${this.state.success}`}>
-                Success! Your information has been sent.
+                Please submit the new issue on Github.
               </p>
             </div>
           </form>

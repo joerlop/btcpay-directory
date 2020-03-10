@@ -18,8 +18,8 @@
         margin: 0 auto;
         font-size: 0.9rem;
         color: $black;
-        padding: 20px 0 20px 20%;
-        border-left: 2px solid $primaryGreen;
+        padding: 20px 0 20px 15%;
+        border-left: 4px solid $primaryGreen;
 
         @media (max-width: $secondBreak) {
             font-size: 0.8rem;
@@ -39,7 +39,7 @@
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
-            border-left: 2px solid $primaryGreen;
+            border-left: 4px solid $primaryGreen;
 
             @media (max-width: $secondBreak) {
                 border-left: none;
@@ -48,7 +48,7 @@
             label {
                 box-sizing: border-box;
                 width: 100%;
-                padding-left: 20%;
+                padding-left: 15%;
                 color: $grey;
                 font-size: 0.8rem;
 
@@ -115,7 +115,7 @@
             }
 
             button {
-                margin-left: 20%;
+                margin-left: 15%;
                 font-size: 0.9rem;
                 text-decoration: none;
                 border: 1px solid $primaryGreen;
@@ -145,7 +145,7 @@
             } //button
 
             .submission-result {
-                margin-left: 20%;
+                margin-left: 15%;
                 font-size: 0.8rem;
                 margin-top: 10px;
                 height: 20px;
