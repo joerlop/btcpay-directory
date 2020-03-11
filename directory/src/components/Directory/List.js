@@ -3,6 +3,7 @@ export const list = [
     name: "ThunderSats",
     url: "https://thundersats.com/",
     type: "apps",
+    subType: "",
     description:
       "ThunderSats is a Provably Fair Miniature Roulette Game on top of the Bitcoin Lightning Network ⚡ No login required."
   },
@@ -10,6 +11,7 @@ export const list = [
     name: "klokit",
     url: "https://klokit.co/m/6260",
     type: "apps",
+    subType: "",
     description:
       "klokit displays the value of your recorded time in Bitcoin as well as your native currency, and also enables you to receive payment in Bitcoin."
   },
@@ -17,6 +19,7 @@ export const list = [
     name: "LNswapBot",
     url: "https://t.me/LNswapBot",
     type: "apps",
+    subType: "",
     description:
       "LNswapbot is a Telegram bot that gives user the opportunity to swap BTC on a Lightning channel for BTC that is on-chain, and Vice Versa."
   },
@@ -24,6 +27,7 @@ export const list = [
     name: "LibrePatron",
     url: "https://github.com/JeffVandrewJr/patron",
     type: "apps",
+    subType: "",
     description:
       "A Self-Hosted Patreon Alternative Backed by BTCPay."
   },
@@ -31,6 +35,7 @@ export const list = [
     name: "Pretix",
     url: "https://pretix.eu/about/en/",
     type: "apps",
+    subType: "",
     description:
       "Pretix is a ticket sales software that uses BTCPay Server."
   },
@@ -38,6 +43,7 @@ export const list = [
     name: "Bitflix",
     url: "https://btcpayprovider.com/btiflix.html",
     type: "apps",
+    subType: "",
     description:
       "Btiflix is a demo of a streaming platform, powered by BTCpay."
   },
@@ -45,6 +51,7 @@ export const list = [
     name: "lightbo.lt",
     url: "https://btcpayjungle.com/Account/Login",
     type: "hosts",
+    subType: "",
     description:
       "Lightbo.lt offers managed solutions and a Bitcoin payment provider. They offer various packages and charge a monthly fee. No transaction fees."
   },
@@ -52,6 +59,7 @@ export const list = [
     name: "btcpayprovider.com",
     url: "https://btcpayprovider.com/",
     type: "hosts",
+    subType: "",
     description:
       "btcpayprovider.com is a BTCPay Server hosting provider."
   },
@@ -59,6 +67,7 @@ export const list = [
     name: "D-Central",
     url: "https://d-central.tech/shop/",
     type: "merchants",
+    subType: "electronics",
     description:
       "D-Central is a one-stop shop for Bitcoin miners in Canada."
   },
@@ -66,6 +75,7 @@ export const list = [
     name: "MerkleSig",
     url: "https://merklesig.com/",
     type: "hosts",
+    subType: "",
     description:
       "Merklesig offers a paid BTCPayServer hosting service."
   },
@@ -73,6 +83,7 @@ export const list = [
     name: "lpay.io",
     url: "https://btcps.lpay.io/Account/Login",
     type: "hosts",
+    subType: "",
     description:
       "lpay.io offers free BTCPayServer hosting services."
   },
@@ -80,6 +91,7 @@ export const list = [
     name: "BTCPay Jungle",
     url: "https://btcpayjungle.com/Account/Login",
     type: "hosts",
+    subType: "",
     description:
       "BTCPay Jungle is a hosted, open-source cryptocurrency payment processor. It is secure, private, censorship-resistant and free."
   },
@@ -87,6 +99,7 @@ export const list = [
     name: "Nakamoto Institute",
     url: "https://nakamotoinstitute.org/donate/",
     type: "non-profit",
+    subType: "",
     description:
       "Founded in 2013, Nakamoto Institute is an educational resource for everything Bitcoin. In-depth researches to Satoshi Nakamoto quotes and forum posts archive."
   }
