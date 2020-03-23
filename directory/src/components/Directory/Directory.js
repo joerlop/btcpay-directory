@@ -25,7 +25,8 @@ function shuffle(array) {
 }
 
 function Directory() {
-  let { filterName } = useParams();
+  let { filterName, subFilterName } = useParams();
+  console.log(filterName, subFilterName);
   const [dirList, setList] = useState(shuffle(list));
 
   const green = "#51B13E";
@@ -34,7 +35,13 @@ function Directory() {
   const pickedColor = green;
 
   useEffect(() => {
-    if (filterName) {
+    if (subFilterName) {
+      let completeList = shuffle(list);
+      let filteredList = completeList.filter(
+        user => user.subType === subFilterName
+      );
+      setList(filteredList);
+    } else if (filterName) {
       let completeList = shuffle(list);
       let filteredList = completeList.filter(user => user.type === filterName);
       setList(filteredList);
@@ -42,54 +49,14 @@ function Directory() {
       let completeList = shuffle(list);
       setList(completeList);
     }
-  }, [filterName]);
+  }, [filterName, subFilterName]);
 
   return (
     <div className="directory-container">
       <h2>Projects and organizations using BTCPay Server</h2>
-      <div className="filters">
-        <NavLink
-          className="filter"
-          exact
-          activeStyle={{ color: pickedColor }}
-          to={"/"}
-        >
-          ALL
-        </NavLink>
-        <NavLink
-          className="filter"
-          exact
-          activeStyle={{ color: pickedColor }}
-          to={"/filter/apps"}
-        >
-          APPS
-        </NavLink>
-        <NavLink
-          className="filter"
-          exact
-          activeStyle={{ color: pickedColor }}
-          to={"/filter/hosts"}
-        >
-          HOSTS
-        </NavLink>
-        <NavLink
-          className="filter"
-          exact
-          activeStyle={{ color: pickedColor }}
-          to={"/filter/merchants"}
-        >
-          MERCHANTS
-        </NavLink>
-        <NavLink
-          className="filter"
-          exact
-          activeStyle={{ color: pickedColor }}
-          to={"/filter/non-profit"}
-        >
-          NON&#8209;PROFITS
-        </NavLink>
-      </div>
       <div className="list-container">
+        {/* dirList is the filtered list of companies - it contains only the companies
+            that match the current filter */}
         {dirList.map(user => (
           <DirectoryItem user={user} />
         ))}

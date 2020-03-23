@@ -2,9 +2,10 @@ import React from "react";
 import "./App.scss";
 import { NavLink, Route } from "react-router-dom";
 import Directory from "./components/Directory/Directory";
-import NewEntry from "./components/NewEntry/NewEntry"
+import NewEntry from "./components/NewEntry/NewEntry";
 import btcPayLogo from "./images/btcpay-directory-logo.svg";
-import darkModeImg from "./images/darkMode.svg"
+import darkModeImg from "./images/darkMode.svg";
+import TemporaryDrawer from "./components/Drawer/TemporaryDrawer";
 
 function App() {
   const green = "#51B13E";
@@ -23,6 +24,7 @@ function App() {
             <NavLink className="newentry" exact to={"/newentry"}>
               Submit an entry
             </NavLink>
+            <TemporaryDrawer />
             {/* <img src={darkModeImg} /> */}
           </div>
         </div>
@@ -31,6 +33,7 @@ function App() {
       <div className="main-content">
         <Route exact path="/" component={Directory} />
         <Route exact path="/filter/:filterName" component={Directory} />
+        <Route exact path="/filter/:filterName/:subFilterName" component={Directory} />
         <Route exact path="/newentry" component={NewEntry} />
       </div>
 
