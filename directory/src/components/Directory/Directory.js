@@ -3,7 +3,7 @@ import "./Directory.scss";
 import { useParams } from "react-router-dom";
 import { list } from "./List";
 import DirectoryItem from "./DirectoryItem";
-import { NavLink } from "react-router-dom";
+import TemporaryDrawer2 from "../Drawer/TemporaryDrawer2";
 
 function shuffle(array) {
   let currentIndex = array.length;
@@ -54,6 +54,17 @@ function Directory() {
   return (
     <div className="directory-container">
       <h2>Projects and organizations using BTCPay Server</h2>
+      <div className="filters">
+        <p>Showing:</p>
+        {filterName ? (
+          <TemporaryDrawer2
+            filterName={filterName}
+            subFilterName={subFilterName}
+          />
+        ) : (
+          <TemporaryDrawer2 filterName="ALL" />
+        )}
+      </div>
       <div className="list-container">
         {/* dirList is the filtered list of companies - it contains only the companies
             that match the current filter */}
