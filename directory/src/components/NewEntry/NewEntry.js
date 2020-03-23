@@ -134,8 +134,12 @@ class NewEntry extends React.Component {
                 name="description"
                 maxLength="250"
               />
+              <div className="max-characters">
+                <p>{`${this.state.description.length} / 250`}</p>
+              </div>
             </label>
             <button onClick={e => this.handleSubmit(e)}>Submit</button>
+            <p className="note">Note: You'll need a Github account to be able to submit a new entry.</p>
             <div className="submission-result">
               <p className={`error error-${this.state.error}`}>
                 Please fill all the required fields.

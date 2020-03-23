@@ -16,7 +16,7 @@
     .entry-title {
         width: 100%;
         margin: 0 auto;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         color: $black;
         padding: 20px 0 20px 15%;
         border-left: 4px solid $primaryGreen;
@@ -86,6 +86,7 @@
                     padding: 10px 7.5px;
                     line-height: 1.5;
                     height: 60px;
+                    margin-bottom: 7.5px;
                 }
 
                 .input-error-true {
@@ -112,6 +113,12 @@
                         border: 1px solid $primaryGreen;
                     }
                 }
+
+                .max-characters {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
             }
 
             button {
@@ -121,7 +128,6 @@
                 border: 1px solid $primaryGreen;
                 border-radius: 4px;
                 padding: 10px 40px;
-                font-weight: 600;
                 color: white;
                 cursor: pointer;
                 transition: all 0.2s ease;
@@ -143,6 +149,12 @@
                     font-size: 0.8rem;
                 }
             } //button
+
+            .note {
+                margin-left: 15%;
+                font-size: 0.7rem;
+                margin-top: 10px;
+            }
 
             .submission-result {
                 margin-left: 15%;
