@@ -9,7 +9,7 @@ import NestedList from "./NestedList";
 
 const useStyles = makeStyles({
   list: {
-    width: 350
+    width: 300
   },
   fullList: {
     width: "auto"

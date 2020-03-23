@@ -26,7 +26,6 @@ function shuffle(array) {
 
 function Directory() {
   let { filterName, subFilterName } = useParams();
-  console.log(filterName, subFilterName);
   const [dirList, setList] = useState(shuffle(list));
 
   const green = "#51B13E";
