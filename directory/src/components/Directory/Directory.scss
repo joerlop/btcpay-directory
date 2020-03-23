@@ -29,41 +29,22 @@
   }
 
   .filters {
-    margin-bottom: 75px;
+    margin-bottom: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.7rem;
 
-    .filter {
+    @media (max-width: $secondBreak) {
       font-size: 0.8rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: $mediumGrey;
-      margin-right: 3%;
-      transition: all 0.2s ease-out;
+      margin-right: 6%;
+    }
 
-      @media (max-width: $firstBreak) {
-        margin-right: 5%;
-      }
-
-      @media (max-width: $secondBreak) {
-        font-size: 0.8rem;
-        margin-right: 6%;
-      }
-
-      // @media (max-width: $thirdBreak) {
-      //   font-size: 0.7rem;
-      // }
-
-      &:hover {
-        color: $primaryGreen;
-      }
-
-      &:last-of-type {
-        margin-right: 0;
-      }
+    p {
+      margin-right: 10px;
     }
   }
-  
+
   .list-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

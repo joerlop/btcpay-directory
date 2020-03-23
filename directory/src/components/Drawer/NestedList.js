@@ -43,7 +43,7 @@ const merchantSubcategories = [
   {
     name: "Appliances & Furniture",
     icon: <DeckIcon className="icon" />,
-    url: "appliances"
+    url: "appliances-furniture"
   },
   {
     name: "Art",
@@ -56,19 +56,19 @@ const merchantSubcategories = [
     url: "books"
   },
   {
-    name: "Computers & Electronics",
+    name: "Electronics",
     icon: <ComputerIcon className="icon" />,
     url: "electronics"
   },
   {
     name: "Cryptocurrency Paraphernalia",
     icon: <ToysIcon className="icon" />,
-    url: "crypto"
+    url: "cryptocurrency-paraphernalia"
   },
   {
-    name: "Domain Names, Hosting and VPNs",
+    name: "Domain Names, Hosting & VPNs",
     icon: <VpnLockIcon className="icon" />,
-    url: "vpns"
+    url: "domains-hosting-vpns"
   },
   {
     name: "Education",
@@ -81,7 +81,7 @@ const merchantSubcategories = [
     url: "fashion"
   },
   {
-    name: "Food & Drink",
+    name: "Food",
     icon: <FastfoodIcon className="icon" />,
     url: "food"
   },
@@ -98,12 +98,12 @@ const merchantSubcategories = [
   {
     name: "Health & Household",
     icon: <HealingIcon className="icon" />,
-    url: "health"
+    url: "health-household"
   },
   {
     name: "Holiday & Travel",
     icon: <FlightTakeoffIcon className="icon" />,
-    url: "holiday"
+    url: "holiday-travel"
   },
   {
     name: "Jewelry",
@@ -123,7 +123,7 @@ const merchantSubcategories = [
   {
     name: "Software & Video Games",
     icon: <VideogameAssetIcon className="icon" />,
-    url: "software"
+    url: "software-video-games"
   },
   {
     name: "Sports",
