@@ -33,6 +33,7 @@ function App() {
       <div className="main-content">
         <Route exact path="/" component={Directory} />
         <Route exact path="/filter/:filterName" component={Directory} />
+        <Route exact path="/filter/:filterName/:subFilterName" component={Directory} />
         <Route exact path="/newentry" component={NewEntry} />
       </div>
 

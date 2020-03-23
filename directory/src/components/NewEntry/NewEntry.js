@@ -121,7 +121,7 @@ class NewEntry extends React.Component {
                 </option>
                 <option value="hosts">Host</option>
                 <option value="merchants">Merchant</option>
-                <option value="non-profit">Non-ptofit</option>
+                <option value="non-profits">Non-ptofit</option>
               </select>
             </label>
             <label htmlFor="description">

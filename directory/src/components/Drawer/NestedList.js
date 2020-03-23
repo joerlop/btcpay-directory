@@ -30,53 +30,116 @@ import BuildIcon from "@material-ui/icons/Build";
 import "./NestedList.scss";
 
 const merchantSubcategories = [
-  "3D Printing",
-  "Adult",
-  "Appliances & Furniture",
-  "Art",
-  "Books",
-  "Computers & Electronics",
-  "Cryptocurrency Paraphernalia",
-  "Domain Names, Hosting and VPNs",
-  "Education",
-  "Fashion",
-  "Food & Drink",
-  "Gambling",
-  "Gift Cards",
-  "Health & Household",
-  "Holiday & Travel",
-  "Jewelry",
-  "Pets",
-  "Services",
-  "Software & Video Games",
-  "Sports",
-  "Streaming",
-  "Tools"
-];
-
-const merchantSubcategoryIcons = [
-  <PrintIcon className="icon" />,
-  <ExplicitIcon className="icon" />,
-  <DeckIcon className="icon" />,
-  <ArtTrackIcon className="icon" />,
-  <BookIcon className="icon" />,
-  <ComputerIcon className="icon" />,
-  <ToysIcon className="icon" />,
-  <VpnLockIcon className="icon" />,
-  <CastForEducationIcon className="icon" />,
-  <EmojiPeopleIcon className="icon" />,
-  <FastfoodIcon className="icon" />,
-  <CasinoIcon className="icon" />,
-  <CardGiftcardIcon className="icon" />,
-  <HealingIcon className="icon" />,
-  <FlightTakeoffIcon className="icon" />,
-  <WatchIcon className="icon" />,
-  <PetsIcon className="icon" />,
-  <RoomServiceIcon className="icon" />,
-  <VideogameAssetIcon className="icon" />,
-  <SportsIcon className="icon" />,
-  <ViewStreamIcon className="icon" />,
-  <BuildIcon className="icon" />
+  {
+    name: "3D Printing",
+    icon: <PrintIcon className="icon" />,
+    url: "3d-printing"
+  },
+  {
+    name: "Adult",
+    icon: <ExplicitIcon className="icon" />,
+    url: "adult"
+  },
+  {
+    name: "Appliances & Furniture",
+    icon: <DeckIcon className="icon" />,
+    url: "appliances"
+  },
+  {
+    name: "Art",
+    icon: <ArtTrackIcon className="icon" />,
+    url: "art"
+  },
+  {
+    name: "Books",
+    icon: <BookIcon className="icon" />,
+    url: "books"
+  },
+  {
+    name: "Computers & Electronics",
+    icon: <ComputerIcon className="icon" />,
+    url: "electronics"
+  },
+  {
+    name: "Cryptocurrency Paraphernalia",
+    icon: <ToysIcon className="icon" />,
+    url: "crypto"
+  },
+  {
+    name: "Domain Names, Hosting and VPNs",
+    icon: <VpnLockIcon className="icon" />,
+    url: "vpns"
+  },
+  {
+    name: "Education",
+    icon: <CastForEducationIcon className="icon" />,
+    url: "education"
+  },
+  {
+    name: "Fashion",
+    icon: <EmojiPeopleIcon className="icon" />,
+    url: "fashion"
+  },
+  {
+    name: "Food & Drink",
+    icon: <FastfoodIcon className="icon" />,
+    url: "food"
+  },
+  {
+    name: "Gambling",
+    icon: <CasinoIcon className="icon" />,
+    url: "gambling"
+  },
+  {
+    name: "Gift Cards",
+    icon: <CardGiftcardIcon className="icon" />,
+    url: "gift-cards"
+  },
+  {
+    name: "Health & Household",
+    icon: <HealingIcon className="icon" />,
+    url: "health"
+  },
+  {
+    name: "Holiday & Travel",
+    icon: <FlightTakeoffIcon className="icon" />,
+    url: "holiday"
+  },
+  {
+    name: "Jewelry",
+    icon: <WatchIcon className="icon" />,
+    url: "jewelry"
+  },
+  {
+    name: "Pets",
+    icon: <PetsIcon className="icon" />,
+    url: "pets"
+  },
+  {
+    name: "Services",
+    icon: <RoomServiceIcon className="icon" />,
+    url: "services"
+  },
+  {
+    name: "Software & Video Games",
+    icon: <VideogameAssetIcon className="icon" />,
+    url: "software"
+  },
+  {
+    name: "Sports",
+    icon: <SportsIcon className="icon" />,
+    url: "sports"
+  },
+  {
+    name: "Streaming",
+    icon: <ViewStreamIcon className="icon" />,
+    url: "streaming"
+  },
+  {
+    name: "Tools",
+    icon: <BuildIcon className="icon" />,
+    url: "tools"
+  }
 ];
 
 export default function NestedList() {
@@ -84,36 +147,48 @@ export default function NestedList() {
     <div className="drawer-list">
       <p className="drawer-title">Categories</p>
 
-      <div className="list-item">
-        <SelectAllIcon className="icon" />
-        <p>All</p>
-      </div>
-
-      <div className="list-item">
-        <AppsIcon className="icon" />
-        <p>Apps</p>
-      </div>
-
-      <div className="list-item">
-        <StorageIcon className="icon" />
-        <p>Hosts</p>
-      </div>
-
-      <div className="list-item">
-        <MoneyOffIcon className="icon" />
-        <p>Non-profits</p>
-      </div>
-
-      <div className="list-item">
-        <StorefrontIcon className="icon" />
-        <p>Merchants</p>
-      </div>
-
-      {merchantSubcategories.map((name, index) => (
-        <div className="nested-list-item">
-          {merchantSubcategoryIcons[index]}
-          <p>{name}</p>
+      <a href="/">
+        <div className="list-item">
+          <SelectAllIcon className="icon" />
+          <p>All</p>
         </div>
+      </a>
+
+      <a href="/filter/apps">
+        <div className="list-item">
+          <AppsIcon className="icon" />
+          <p>Apps</p>
+        </div>
+      </a>
+
+      <a href="/filter/hosts">
+        <div className="list-item">
+          <StorageIcon className="icon" />
+          <p>Hosts</p>
+        </div>
+      </a>
+
+      <a href="/filter/non-profits">
+        <div className="list-item">
+          <MoneyOffIcon className="icon" />
+          <p>Non-profits</p>
+        </div>
+      </a>
+
+      <a href="/filter/merchants">
+        <div className="list-item">
+          <StorefrontIcon className="icon" />
+          <p>Merchants</p>
+        </div>
+      </a>
+
+      {merchantSubcategories.map(subCat => (
+        <a href={`/filter/merchants/${subCat.url}`}>
+          <div className="nested-list-item">
+            {subCat.icon}
+            <p>{subCat.name}</p>
+          </div>
+        </a>
       ))}
     </div>
   );

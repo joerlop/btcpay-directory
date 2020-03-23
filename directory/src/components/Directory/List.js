@@ -59,6 +59,7 @@ export const list = [
     name: "D-Central",
     url: "https://d-central.tech/shop/",
     type: "merchants",
+    subType: "electronics",
     description:
       "D-Central is a one-stop shop for Bitcoin miners in Canada."
   },
@@ -86,7 +87,7 @@ export const list = [
   {
     name: "Nakamoto Institute",
     url: "https://nakamotoinstitute.org/donate/",
-    type: "non-profit",
+    type: "non-profits",
     description:
       "Founded in 2013, Nakamoto Institute is an educational resource for everything Bitcoin. In-depth researches to Satoshi Nakamoto quotes and forum posts archive."
   }
