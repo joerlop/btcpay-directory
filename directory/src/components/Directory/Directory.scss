@@ -35,11 +35,6 @@
     align-items: center;
     font-size: 0.7rem;
 
-    @media (max-width: $secondBreak) {
-      font-size: 0.8rem;
-      margin-right: 6%;
-    }
-
     p {
       margin-right: 10px;
     }
