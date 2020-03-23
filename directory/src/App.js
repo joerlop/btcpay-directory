@@ -24,7 +24,7 @@ function App() {
             <NavLink className="newentry" exact to={"/newentry"}>
               Submit an entry
             </NavLink>
-            <TemporaryDrawer />
+            {/* <TemporaryDrawer /> */}
             {/* <img src={darkModeImg} /> */}
           </div>
         </div>
