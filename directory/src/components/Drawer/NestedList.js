@@ -1,12 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import ListSubheader from "@material-ui/core/ListSubheader";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-
-import SelectAllIcon from '@material-ui/icons/SelectAll';
+import SelectAllIcon from "@material-ui/icons/SelectAll";
 import AppsIcon from "@material-ui/icons/Apps";
 import StorageIcon from "@material-ui/icons/Storage";
 import MoneyOffIcon from "@material-ui/icons/MoneyOff";
@@ -34,16 +27,7 @@ import SportsIcon from "@material-ui/icons/Sports";
 import ViewStreamIcon from "@material-ui/icons/ViewStream";
 import BuildIcon from "@material-ui/icons/Build";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper
-  },
-  nested: {
-    paddingLeft: theme.spacing(4)
-  }
-}));
+import "./NestedList.scss";
 
 const merchantSubcategories = [
   "3D Printing",
@@ -71,86 +55,66 @@ const merchantSubcategories = [
 ];
 
 const merchantSubcategoryIcons = [
-  <PrintIcon />,
-  <ExplicitIcon />,
-  <DeckIcon />,
-  <ArtTrackIcon />,
-  <BookIcon />,
-  <ComputerIcon />,
-  <ToysIcon />,
-  <VpnLockIcon />,
-  <CastForEducationIcon />,
-  <EmojiPeopleIcon />,
-  <FastfoodIcon />,
-  <CasinoIcon />,
-  <CardGiftcardIcon />,
-  <HealingIcon />,
-  <FlightTakeoffIcon />,
-  <WatchIcon />,
-  <PetsIcon />,
-  <RoomServiceIcon />,
-  <VideogameAssetIcon />,
-  <SportsIcon />,
-  <ViewStreamIcon />,
-  <BuildIcon />
+  <PrintIcon className="icon" />,
+  <ExplicitIcon className="icon" />,
+  <DeckIcon className="icon" />,
+  <ArtTrackIcon className="icon" />,
+  <BookIcon className="icon" />,
+  <ComputerIcon className="icon" />,
+  <ToysIcon className="icon" />,
+  <VpnLockIcon className="icon" />,
+  <CastForEducationIcon className="icon" />,
+  <EmojiPeopleIcon className="icon" />,
+  <FastfoodIcon className="icon" />,
+  <CasinoIcon className="icon" />,
+  <CardGiftcardIcon className="icon" />,
+  <HealingIcon className="icon" />,
+  <FlightTakeoffIcon className="icon" />,
+  <WatchIcon className="icon" />,
+  <PetsIcon className="icon" />,
+  <RoomServiceIcon className="icon" />,
+  <VideogameAssetIcon className="icon" />,
+  <SportsIcon className="icon" />,
+  <ViewStreamIcon className="icon" />,
+  <BuildIcon className="icon" />
 ];
 
 export default function NestedList() {
-  const classes = useStyles();
-
   return (
-    <List
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Categories
-        </ListSubheader>
-      }
-      className={classes.root}
-    >
+    <div className="drawer-list">
+      <p className="drawer-title">Categories</p>
 
-      <ListItem button>
-        <ListItemIcon>
-          <SelectAllIcon />
-        </ListItemIcon>
-        <ListItemText primary="All" />
-      </ListItem>
+      <div className="list-item">
+        <SelectAllIcon className="icon" />
+        <p>All</p>
+      </div>
 
-      <ListItem button>
-        <ListItemIcon>
-          <AppsIcon />
-        </ListItemIcon>
-        <ListItemText primary="Apps" />
-      </ListItem>
+      <div className="list-item">
+        <AppsIcon className="icon" />
+        <p>Apps</p>
+      </div>
 
-      <ListItem button>
-        <ListItemIcon>
-          <StorageIcon />
-        </ListItemIcon>
-        <ListItemText primary="Hosts" />
-      </ListItem>
+      <div className="list-item">
+        <StorageIcon className="icon" />
+        <p>Hosts</p>
+      </div>
 
-      <ListItem button>
-        <ListItemIcon>
-          <MoneyOffIcon />
-        </ListItemIcon>
-        <ListItemText primary="Non-profits" />
-      </ListItem>
+      <div className="list-item">
+        <MoneyOffIcon className="icon" />
+        <p>Non-profits</p>
+      </div>
 
-      <ListItem button className={classes.root}>
-        <ListItemIcon>
-          <StorefrontIcon />
-        </ListItemIcon>
-        <ListItemText primary="Merchants" />
-      </ListItem>
+      <div className="list-item">
+        <StorefrontIcon className="icon" />
+        <p>Merchants</p>
+      </div>
 
       {merchantSubcategories.map((name, index) => (
-        <ListItem button className={classes.nested}>
-          <ListItemIcon>{merchantSubcategoryIcons[index]}</ListItemIcon>
-          <ListItemText primary={name} />
-        </ListItem>
+        <div className="nested-list-item">
+          {merchantSubcategoryIcons[index]}
+          <p>{name}</p>
+        </div>
       ))}
-    </List>
+    </div>
   );
 }
