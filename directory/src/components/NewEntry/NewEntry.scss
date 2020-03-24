@@ -154,6 +154,10 @@
                 margin-left: 15%;
                 font-size: 0.7rem;
                 margin-top: 10px;
+
+                @media (max-width: $secondBreak) {
+                    margin-left: 0;
+                }
             }
 
             .submission-result {
