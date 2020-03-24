@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import NestedList from "./NestedList";
+import { Menu } from "@material-ui/core";
 
 const useStyles = makeStyles({
   list: {
@@ -47,11 +48,11 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <div>
+    <div className="drawer-button-container">
       <React.Fragment key={"right"}>
-        <Button onClick={toggleDrawer("right", true)}>
+        <button className="drawer-button" onClick={toggleDrawer("right", true)}>
           <MenuIcon />
-        </Button>
+        </button>
         <Drawer
           anchor={"right"}
           open={state["right"]}

@@ -17,16 +17,17 @@
       border-bottom: 1px solid lightgrey;
 
       display: grid;
-      grid-template-columns: 15% 150px 1fr 15%;
+      grid-template-columns: 15% 1fr 1fr 15%;
       padding: 15px 0;
       grid-template-areas: ". logo items .";
 
       @media (max-width: $firstBreak) {
-        grid-template-columns: 10% 150px 1fr 10%;
+        grid-template-areas: ". logo items .";
+        grid-template-columns: 10% 1fr 1fr 10%;
       }
 
       @media (max-width: $secondBreak) {
-        grid-template-columns: 5% 150px 1fr 5%;
+        grid-template-columns: 5% 1fr 1fr 5%;
       }
 
       a {
@@ -61,7 +62,7 @@
           cursor: pointer;
           transition: all 0.2s ease;
           background: $primaryGreen;
-          // margin-right: 10px;
+          margin-right: 10px;
 
           @media (max-width: $thirdBreak) {
             font-size: 0.8rem;
@@ -75,24 +76,49 @@
           }
         }
 
-        img {
-          height: 30px;
-          width: auto;
-          margin-left: 4%;
+        .drawer-button-container {
+          grid-area: items;
+          align-self: center;
 
-          @media (max-width: $firstBreak) {
-            margin-left: 5%;
-          }
+          display: flex;
+          align-items: center;
+  
+          .drawer-button {
+            display: flex;
+            align-items: center;
 
-          @media (max-width: $secondBreak) {
-            height: 27px;
-            margin-left: 5%;
-          }
-
-          @media (max-width: $thirdBreak) {
-            height: 22px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 5px;
+            transition: ease .3s all;
+            outline: none;
+  
+            &:hover {
+              background: lighten(lightgrey, 10%);
+            }
           }
         }
+
+        // img {
+        //   height: 30px;
+        //   width: auto;
+        //   margin-left: 4%;
+
+        //   @media (max-width: $firstBreak) {
+        //     margin-left: 5%;
+        //   }
+
+        //   @media (max-width: $secondBreak) {
+        //     height: 27px;
+        //     margin-left: 5%;
+        //   }
+
+        //   @media (max-width: $thirdBreak) {
+        //     height: 22px;
+        //   }
+        // }
       }
     }
   } //header
