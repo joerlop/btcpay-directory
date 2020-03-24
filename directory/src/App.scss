@@ -13,7 +13,8 @@
   header {
 
     .navigation-menu {
-      box-shadow: 0 10px 40px rgba(12, 0, 68, 0.1); //gradient
+      // box-shadow: 0 10px 40px rgba(12, 0, 68, 0.1); //gradient
+      border-bottom: 1px solid lightgrey;
 
       display: grid;
       grid-template-columns: 15% 150px 1fr 15%;
@@ -33,11 +34,11 @@
 
         img {
           height: auto;
-          width: 225px;
+          width: 200px;
 
-          @media (max-width: $thirdBreak) {
-            width: 200px;
-          }
+          // @media (max-width: $thirdBreak) {
+          //   width: 200px;
+          // }
         }
       }
 
