@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NewEntry.scss";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 class NewEntry extends React.Component {
   constructor(props) {
@@ -115,14 +116,16 @@ class NewEntry extends React.Component {
             </label>
             <label htmlFor="type">
               Type *
-              <select onChange={e => this.handleSelect(e)} id="type">
-                <option value="apps" defaultValue>
-                  App
-                </option>
-                <option value="hosts">Host</option>
-                <option value="merchants">Merchant</option>
-                <option value="non-profits">Non-ptofit</option>
-              </select>
+              <div className="select-container">
+                <select onChange={e => this.handleSelect(e)} id="type">
+                  <option value="apps" defaultValue>
+                    App
+                  </option>
+                  <option value="hosts">Host</option>
+                  <option value="merchants">Merchant</option>
+                  <option value="non-profits">Non-ptofit</option>
+                </select>
+              </div>
             </label>
             <label htmlFor="description">
               Description *
@@ -139,7 +142,10 @@ class NewEntry extends React.Component {
               </div>
             </label>
             <button onClick={e => this.handleSubmit(e)}>Submit</button>
-            <p className="note">Note: You'll need a Github account to be able to submit a new entry.</p>
+            <p className="note">
+              Note: You'll need a Github account to be able to submit a new
+              entry.
+            </p>
             <div className="submission-result">
               <p className={`error error-${this.state.error}`}>
                 Please fill all the required fields.
